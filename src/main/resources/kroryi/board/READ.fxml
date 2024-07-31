@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="600.0" prefWidth="880.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kroryi.board.controller.ReadController">
+   <children>
+      <fx:include source="MENU.fxml"/>
+      <Label layoutX="357.0" layoutY="14.0" text="게시판 상세보기">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="177.0" layoutY="99.0" text="제목 :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="177.0" layoutY="158.0" text="작성자 :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="177.0" layoutY="223.0" text="작성 일자 :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="177.0" layoutY="286.0" text="내용 :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tfTitle" editable="false" layoutX="287.0" layoutY="93.0" prefHeight="29.0" prefWidth="424.0" style="-fx-background-color: #C0C0C0;">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="tfWriter" editable="false" layoutX="287.0" layoutY="152.0" prefHeight="29.0" prefWidth="424.0" style="-fx-background-color: #C0C0C0;">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="tfRegDate" editable="false" layoutX="287.0" layoutY="217.0" prefHeight="29.0" prefWidth="424.0" style="-fx-background-color: #C0C0C0;">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <TextArea fx:id="taContent" editable="false" layoutX="287.0" layoutY="286.0" prefHeight="249.0" prefWidth="424.0" style="-fx-background-color: gray;" />
+      <Button layoutX="170.0" layoutY="554.0" mnemonicParsing="false" onAction="#ReadmovetoList" prefHeight="34.0" prefWidth="76.0" text="목록보기" />
+      <Button layoutX="287.0" layoutY="554.0" mnemonicParsing="false" onAction="#ReadmovetoUpdate" prefHeight="34.0" prefWidth="76.0" text="수정" />
+      <Button layoutX="381.0" layoutY="554.0" mnemonicParsing="false" onAction="#ReadmovetoDelete" prefHeight="34.0" prefWidth="76.0" text="삭제" />
+      <Button layoutX="635.0" layoutY="554.0" mnemonicParsing="false" onAction="#ReadmovetoNext" prefHeight="34.0" prefWidth="76.0" text="Next &gt;" />
+      <Button layoutX="549.0" layoutY="554.0" mnemonicParsing="false" onAction="#ReadmovetoPrev" prefHeight="34.0" prefWidth="76.0" text="&lt; Prev" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="600.0" prefWidth="880.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kroryi.board.controller.UpdateController">
+   <bottom>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="40.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onAction="#UpdatemovetoList" prefHeight="34.0" prefWidth="76.0" text="목록보기" />
+            <Button mnemonicParsing="false" onAction="#UpdatemovetoUpdate" prefHeight="34.0" prefWidth="76.0" text="확인" />
+            <Button mnemonicParsing="false" onAction="#UpdatemovetoDelete" prefHeight="34.0" prefWidth="76.0" text="삭제" />
+            <Button mnemonicParsing="false" onAction="#UpdatemovetoPrev" prefHeight="34.0" prefWidth="76.0" text="&lt; Prev" />
+            <Button mnemonicParsing="false" onAction="#UpdatemovetoNext" prefHeight="34.0" prefWidth="76.0" text="Next &gt;" />
+         </children>
+      </HBox>
+   </bottom>
+   <center>
+      <SplitPane dividerPositions="0.2938496583143508" prefHeight="160.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <items>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <Label layoutX="32.0" layoutY="156.0" text="작성 일자 :">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="32.0" layoutY="21.0" text="제목 :">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="32.0" layoutY="87.0" text="작성자 :">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="32.0" layoutY="219.0" text="내용 :">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <TextArea fx:id="taContent" layoutX="7.0" layoutY="210.0" prefHeight="249.0" prefWidth="595.0" />
+                  <TextField fx:id="tfWriter" layoutX="8.0" layoutY="84.0" prefHeight="37.0" prefWidth="594.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="tfTitle" layoutX="9.0" layoutY="14.0" prefHeight="37.0" prefWidth="592.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="tfRegDate" layoutX="8.0" layoutY="153.0" prefHeight="37.0" prefWidth="593.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+   </center>
+   <top>
+      <Label text="게시판 수정" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+   </top>
+</BorderPane>

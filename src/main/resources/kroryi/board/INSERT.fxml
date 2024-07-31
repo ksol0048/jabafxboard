@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="600.0" prefWidth="880.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kroryi.board.controller.InsertController">
+   <bottom>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="60.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onAction="#movetoList" prefHeight="49.0" prefWidth="95.0" text="목록보기" />
+            <Button mnemonicParsing="false" onAction="#Insert" prefHeight="49.0" prefWidth="95.0" text="등록" />
+         </children>
+      </HBox>
+   </bottom>
+   <center>
+      <SplitPane dividerPositions="0.29797979797979796" prefHeight="160.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <items>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <Label alignment="CENTER" layoutX="20.0" layoutY="14.0" prefHeight="43.0" prefWidth="70.0" text="제목 : ">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="26.0" layoutY="104.0" prefHeight="43.0" prefWidth="70.0" text="작성자 : ">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="14.0" layoutY="199.0" prefHeight="43.0" prefWidth="82.0" text="내용 : ">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <TextField fx:id="tfTitle" layoutX="8.0" layoutY="14.0" prefHeight="43.0" prefWidth="488.0" promptText="제목을 입력하세요." />
+                  <TextField fx:id="tfWriter" layoutX="8.0" layoutY="103.0" prefHeight="43.0" prefWidth="489.0" promptText="작성자" />
+                  <TextArea fx:id="taContent" layoutX="8.0" layoutY="201.0" prefHeight="244.0" prefWidth="488.0" promptText="내용을 입력하세요">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </TextArea>
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+   </center>
+   <left>
+      <fx:include source="MENU.fxml" />
+   </left>
+   <top>
+      <Label alignment="CENTER" prefHeight="43.0" prefWidth="868.0" text="Board Write" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+   </top>
+</BorderPane>

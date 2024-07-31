@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+
+<BorderPane prefHeight="600.0" prefWidth="880.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kroryi.board.Controller">
+   <bottom>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onAction="#moveToInsert" prefHeight="43.0" prefWidth="86.0" text="작성하기" />
+            <Button mnemonicParsing="false" onAction="#moveToDelete" prefHeight="43.0" prefWidth="86.0" text="삭제하기" />
+            <Button mnemonicParsing="false" onAction="#Close" prefHeight="43.0" prefWidth="64.0" text="닫기" />
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </HBox>
+   </bottom>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="boardTableView" prefHeight="396.0" prefWidth="721.0">
+               <columns>
+                  <TableColumn fx:id="colCheckbox" minWidth="0.0" prefWidth="59.0">
+                     <graphic>
+                        <CheckBox fx:id="chkSelected" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="18.0" prefWidth="15.0" />
+                     </graphic>
+                  </TableColumn>
+                  <TableColumn fx:id="colNo" minWidth="0.0" prefWidth="35.0" text="No" />
+                  <TableColumn fx:id="colTitle" prefWidth="242.0" text="제목" />
+                  <TableColumn fx:id="colWriter" prefWidth="83.0" text="등록자" />
+                  <TableColumn fx:id="colRegDate" minWidth="0.0" prefWidth="143.0" text="등록 날짜" />
+                  <TableColumn fx:id="colDpbDate" maxWidth="203.0" prefWidth="144.0" text="수정 날짜" />
+               </columns>
+            </TableView>
+            <Pagination fx:id="pagination" prefHeight="50.0" prefWidth="285.0" />
+         </children>
+      </VBox>
+   </center>
+   <left>
+      <fx:include source="MENU.fxml" />
+   </left>
+   <top>
+      <Label alignment="CENTER" prefHeight="43.0" prefWidth="880.0" text="Board List" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+   </top>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</BorderPane>
