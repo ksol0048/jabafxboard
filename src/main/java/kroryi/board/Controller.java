@@ -33,7 +33,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
-
+ // 컨트롤 메뉴
 public class Controller implements Initializable {
     @FXML
     private TableView<Board> boardTableView;
